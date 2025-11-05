@@ -1,0 +1,15 @@
+#مقدار استانه
+threshold = 1.5
+
+#ورودی ها و وزن هاشون
+inputs = [1, 0, 1, 0, 1]
+weights = [0.7, 0.6, 0.5, 0.3, 0.4]
+sum = 0
+
+#محاسبه ی وزن ورودی ها
+for i in range(len(inputs)):
+    sum += inputs[i] * weights[i]
+
+#اینجا برسی میشه که جمع وزن ها از استانه بیشتر میشه یا نه
+print("jam" ,sum )activate = sum > threshold
+print("Will I go to the gym?", activate)
